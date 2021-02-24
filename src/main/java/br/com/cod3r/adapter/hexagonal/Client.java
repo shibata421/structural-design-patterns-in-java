@@ -9,7 +9,7 @@ public class Client {
 
 	public static void main(String[] args) {
 		UserRest userRestApi = new UserRest();
-		Map<String, String> body = new HashMap<String, String>();
+		Map<String, String> body = new HashMap<>();
 		body.put("email", "user1@email.com");
 		body.put("name", "User 1");
 		body.put("password", "passwd");
