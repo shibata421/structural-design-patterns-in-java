@@ -1,14 +1,16 @@
 package br.com.cod3r.bridge.converter.employees;
 
+import java.math.BigDecimal;
+
 public abstract class Employee {
 	protected String name;
 	protected Integer age;
-	protected Double salary;
+	protected BigDecimal salary;
 	
 	public Employee(String name, Integer age, Double salary) {
 		this.name = name;
 		this.age = age;
-		this.salary = salary;
+		this.salary = new BigDecimal(salary);
 	}
 
 	public String getName() {
@@ -28,10 +30,10 @@ public abstract class Employee {
 	}
 
 	public Double getSalary() {
-		return salary;
+		return salary.doubleValue();
 	}
 
 	public void setSalary(Double salary) {
-		this.salary = salary;
+		this.salary = new BigDecimal(salary);
 	}
 }
