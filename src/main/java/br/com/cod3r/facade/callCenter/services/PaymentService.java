@@ -8,11 +8,12 @@ import br.com.cod3r.facade.callCenter.model.Register;
 public class PaymentService {
 	private RegisterService registerService;
 	
-	public PaymentService(RegisterService registerService) {
+	PaymentService(RegisterService registerService) {
 		this.registerService = registerService;
 	}
 
-	public void getPaymentInfoByCard(Card card) {
+	void getPaymentInfoByCard(Card card) {
+		System.out.println("-----------PAYMENT-------------");
 		List<Register> registers = registerService.getRegistersByCard(card);
 		double sum = registers.stream()
 				.reduce(0d, (partialValue, reg) -> partialValue + reg.getValue(), Double::sum);
