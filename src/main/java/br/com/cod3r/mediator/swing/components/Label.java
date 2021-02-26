@@ -2,16 +2,18 @@ package br.com.cod3r.mediator.swing.components;
 
 import javax.swing.JLabel;
 
+import br.com.cod3r.mediator.swing.Mediator;
+
 public class Label extends JLabel {
 	private static final long serialVersionUID = 4136663121512778435L;
-	private State state;
+	private Mediator mediator;
 	
-	public Label(State state) {
+	public Label(Mediator mediator) {
 		super("Times Clicked: 0");
-		this.state = state;
+		this.mediator = mediator;
 	}
 
 	public void refresh() {
-		super.setText("Times Clicked: " + state.getCounter());
+		super.setText("Times Clicked: " + mediator.getCounter());
 	}
 }

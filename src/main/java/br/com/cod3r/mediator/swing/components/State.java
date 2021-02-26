@@ -1,7 +1,7 @@
 package br.com.cod3r.mediator.swing.components;
 
-
 public class State {
+	
 	private int counter;
 	
 	public State() {

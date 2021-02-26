@@ -11,16 +11,24 @@ import br.com.cod3r.mediator.swing.components.ResetButton;
 import br.com.cod3r.mediator.swing.components.State;
 
 public class Client {
+	
 	private AddButton button;
 	private ResetButton reset;
 	private Label label;
 	private State state;
+	private Mediator mediator;
 	
 	public Client() {
+		mediator = new Mediator();
+		
 		state = new State();
-		label = new Label(state);
-		button = new AddButton(state, label);
-		reset = new ResetButton(state, label, button);
+		label = new Label(mediator);
+		button = new AddButton(mediator);
+		reset = new ResetButton(mediator);
+		
+		mediator.setState(state);
+		mediator.setLabel(label);
+		mediator.setButton(button);
 	}
 
 	public void run() {
