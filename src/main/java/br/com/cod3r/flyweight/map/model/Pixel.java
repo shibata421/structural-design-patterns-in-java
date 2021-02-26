@@ -2,11 +2,11 @@ package br.com.cod3r.flyweight.map.model;
 
 public class Pixel {
 	private PixelType type;
-	private boolean oppened;
+	private boolean opened;
 	
-	public Pixel(PixelType type, boolean oppened) {
+	public Pixel(PixelType type, boolean opened) {
 		this.type = type;
-		this.oppened = oppened;
+		this.opened = opened;
 	}
 
 	public PixelType getType() {
@@ -17,11 +17,11 @@ public class Pixel {
 		this.type = type;
 	}
 
-	public boolean isOppened() {
-		return oppened;
+	public boolean isOpened() {
+		return opened;
 	}
 
-	public void setOppened(boolean oppened) {
-		this.oppened = oppened;
+	public void setOpened(boolean oppened) {
+		this.opened = oppened;
 	}
 }
