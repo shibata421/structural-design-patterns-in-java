@@ -11,7 +11,10 @@ public class ResourceProxy implements Resource {
 
 	@Override
 	public String getData() {
-		if(!tokenProvided.equals(validToken)) return "Invalid Token";
+		if(!tokenProvided.equals(validToken)) {
+			return "Invalid Token";
+		}
+		
 		if(realResource == null) {
 			try {
 				realResource = new ResourceImpl();
@@ -19,6 +22,7 @@ public class ResourceProxy implements Resource {
 				e.printStackTrace();
 			}
 		}
+		
 		return realResource.getData();
 	}
 }

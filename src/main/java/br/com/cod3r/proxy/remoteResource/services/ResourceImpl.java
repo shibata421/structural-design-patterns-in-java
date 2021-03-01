@@ -9,7 +9,7 @@ public class ResourceImpl implements Resource {
 			Thread.sleep(1000);
 			System.out.print(".");
 		}
-		this.data = "This is all your data =)";
+		this.data = "This is your data =)";
 		System.out.println("Resource is ready!");
 	}
 
